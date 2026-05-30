@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #0F5132;
+  --color-primary-green-dark: #0B4627;
+  --color-accent-emerald: #10B981;
+  --color-accent-soft: #E6F4EA;
+  --font-plus-jakarta: var(--font-plus-jakarta), sans-serif;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  
+  --shadow-antigravity-sm: 0 4px 20px rgba(0, 0, 0, 0.015);
+  --shadow-antigravity-md: 0 8px 30px rgba(0, 0, 0, 0.025);
+  --shadow-antigravity-lg: 0 20px 50px rgba(0, 0, 0, 0.045);
+  --shadow-antigravity-active: 0 20px 50px rgba(15, 81, 50, 0.08);
+}
+
+:root {
+  --background: #F8FAFC; /* slate-50 */
+  --foreground: #090D16; /* slate-950 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CBD5E1;
+}
+
+/* Custom elevations and animations */
+.antigravity-card {
+  background: #FFFFFF;
+  border-radius: 1.5rem; /* rounded-3xl */
+  box-shadow: var(--shadow-antigravity-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.antigravity-card:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: var(--shadow-antigravity-lg);
+}
+
+/* Day and night card transitions */
+.card-day {
+  background: #FFFFFF;
+  color: #090D16;
+}
+
+.card-night {
+  background: #F1F5F9; /* slate-100 */
+  color: #334155; /* slate-700 */
+}
